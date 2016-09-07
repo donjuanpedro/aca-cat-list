@@ -22,7 +22,10 @@ module.exports = {
   },
 
   create(req, res, next) {
-    const { name, bio, hobbies, image } = req.body;
+    const name = req.body;
+    const bio = req.body;
+    const hobbies = req.body;
+    const image = req.body;
 
     new CatModel({ name, bio, hobbies, image }).save()
       .then(cat => {
